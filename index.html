@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Internship</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1 class="tit">Saas App</h1>
+    <div class="container">
+        <div class="left">
+            <h1>Videos</h1>
+            <div class="questions" onclick="getV(1)">Video 1</div>
+            <div class="questions" onclick="getV(2)">Video 2</div>
+            <div class="questions" onclick="getV(3)">Video 3</div>
+            <div class="questions" onclick="getV(4)">Video 4</div>
+        </div>
+        <div class="center">
+            <video src="1.mp4" id="vi" controls autoplay></video>
+            <div class="qu">
+                <h2>Question 1:</h2>
+                <p>What the video about?</p>
+                <input type="text" id="answer1" required />
+
+                <h2>Question 2:</h2>
+                <p>What do u understand from the above video?</p>
+                <input type="text" id="answer2" required />
+
+                <h2>Question 3:</h2>
+                <p>How can our SaaS App help you with your daily tasks?</p>
+                <input type="text" id="answer3" required />
+
+                <button onclick="submitAnswers()">Submit</button>
+            </div>
+            
+
+        </div>
+        <div class="right">
+            <h2>AI-generated Answers:</h2>
+            <ul id="aiAnswers"></ul>
+        
+        </div>
+
+    </div>
+    <div class="footer">
+        Copyrights &copy; belongs to Mr.Manoj D
+    </div>
+    
+    <script>
+        function submitAnswers() {
+            var answer1 = document.getElementById('answer1').value;
+            var answer2 = document.getElementById('answer2').value;
+            var answer3 = document.getElementById('answer3').value;
+
+            var aiAnswer1 = generateAiAnswer(answer1);
+            var aiAnswer2 = generateAiAnswer(answer2);
+            var aiAnswer3 = generateAiAnswer(answer3);
+
+            var aiAnswersList = document.getElementById('aiAnswers');
+            aiAnswersList.innerHTML = `<li><h3>Question 1:</h3> ${aiAnswer1}</li><li><h3>Question 2:</h3> ${aiAnswer2}</li><li><h3>Question 3:</h3> ${aiAnswer3}</li>`;
+
+        }
+
+        
+        var possibleAnswers = [
+            "The Video is about the the process of product that can be used in different ways.",
+            "I can understand that the process of work that can be done by this product.",
+            "Our main feature is seamless integration with other tools."
+        ];
+
+        function generateAiAnswer(question) {
+
+            var randomIndex = Math.floor(Math.random() * possibleAnswers.length);
+            var randomAnswer = possibleAnswers[randomIndex];
+            return randomAnswer;
+        }
+
+        var videos=["1.mp4","2.mp4","3.mp4","4.mp4"];
+        function getV(i){
+            document.getElementById("answer1").value="";
+            document.getElementById("answer2").value="";
+            document.getElementById("answer3").value="";
+
+            document.getElementById("aiAnswers").innerHTML="";
+
+            document.getElementById("vi").src=videos[i-1];
+        }
+
+
+    </script>
+</body>
+</html>

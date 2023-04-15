@@ -1,0 +1,138 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.container{
+    display: flex;
+}
+.left{
+    position: relative;
+    box-shadow: 0px 0px 0px 1px gray;
+    width: 150px;
+    height: 140vh;
+    justify-content: space-around;
+}
+
+.center{
+    width: 1200px;
+}
+.center .video{
+    margin-top: 2%;
+    text-align: center;
+    box-shadow: 0px 1px gray;
+}
+.right{
+    position: relative;
+    box-shadow: 0px 0px 0px 1px gray;
+    width: 400px;
+    padding-left: 15px;
+    padding-right: 5px;
+    height: 140vh;
+}
+.tit{
+    text-align: center;
+    margin: 10px;
+    box-shadow: 1px 1px 1px gray;
+    width: 100%;
+    margin-left: 0;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+}
+
+
+.left .questions{
+    padding-top: 50px;
+    width: 95%;
+    margin-left: 2px;
+    align-items: center;
+    font-size: 35px;
+    text-align: center;
+    padding-bottom: 50px;
+    border: 0.5px solid;
+    margin-bottom: 5px;
+    border-radius: 5px;
+}
+.left .questions:hover{
+    box-shadow: 1px 1px 1px 1px gray;
+}
+.left h1{
+    text-align: center;
+    margin-bottom: 10px;
+    text-decoration: underline;
+}
+
+
+.center video{
+    margin-left: 3%;
+    width: 95%;
+    height: 500px;
+    border: 1px solid black;
+}
+.hide{
+    display: none;
+}
+
+.center .qu{
+    margin: 100px;
+    margin-top: 50px;
+    font-size: 20px;
+
+}
+.center .qu h2{
+    margin-bottom: 10px;
+}
+.center .qu p{
+    font-family: 'Times New Roman', Times, serif;
+    margin-bottom: 10px;
+}
+.center .qu input{
+    width: 100%;
+    height: 30px;
+    margin-bottom: 10px;
+    border: none;
+    border-bottom: 1px solid gray;
+    font-size: 20px;
+    outline: none;
+}
+.center .qu button{
+    padding: 10px;
+    background-color: red;
+    color: white;
+    font-size: 20px;
+    border: red;
+    border-radius: 30px;
+    border-top-right-radius: 0;
+    margin: 10px;
+    margin-left: 85%;
+    transition: 1s all ease;
+    margin-bottom: 0;
+}
+.center .qu button:hover{
+    border-radius: 30px;
+    background-color: transparent;
+    color: red;
+    border: solid red;
+}
+
+.right h2{
+    text-decoration: underline;
+    margin-bottom: 50px;
+}
+.right ul{
+    list-style: none;
+}
+.right ul li {
+    margin-bottom: 20px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.footer{
+    text-align: center;
+    margin: 20px;
+    margin-bottom: 30px;
+    font-size: 20px;
+    background-color: gray;
+    color: white;
+}
